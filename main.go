@@ -56,7 +56,7 @@ func send() {
 	}
 	uuid := GenerateShortUUID()
 	log.Println("请在其他机器上运行下面命令：")
-	log.Println("go run main.go recv", uuid)
+	log.Println("filescp recv", uuid)
 	udpBoardcastClient, err := net.DialUDP("udp", nil, &net.UDPAddr{
 		IP:   net.IPv4(255, 255, 255, 255),
 		Port: udpBoardcastPort,
